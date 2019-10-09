@@ -12,6 +12,7 @@ gulp.task('html',function(){
 gulp.task('css',function(){
 	return gulp.src('develop/css/*styl')
 		.pipe($.stylus({compress:true}))
+		.pipe($.concat('test.css'))
 		.pipe(gulp.dest('product'))
 		.pipe($.connect.reload())
 })
